@@ -1,0 +1,114 @@
+.boxMenu {
+	min-height: 30vh;
+}
+
+.titreMenu h3{
+	color: var(--coco);
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 10px 20px;
+	border: 0px solid var(--citron);
+}
+
+.menuBG {
+	background-size: cover;
+	background-color: var(--brocoli);
+	background-blend-mode: overlay;
+	text-transform: uppercase;
+}
+
+.menuBG:hover {
+	background-size: cover;
+	background-color: var(--epinard);
+	background-blend-mode: multiply;
+	cursor: pointer;
+}
+
+.menuBG:hover h3{
+	color: var(--citron);
+	text-decoration: underline 2px solid var(--citron);
+	text-underline-offset: 10px;
+}
+
+.brunch {
+	background-image: url(../imgs/menu_brunch.jpg);
+}
+
+.diner {
+	background-image: url(../imgs/menu_diner.jpg);
+}
+
+.souper {
+	background-image: url(../imgs/menu_souper.jpg);
+}
+
+.boissons {
+	background-image: url(../imgs/menu_boissons.jpg);
+}
+
+.grilleMenu {
+	gap: 20px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	align-items: end;
+	width: 80%;
+	align-content: center;
+	margin: auto;
+}
+
+.grilleMenu > article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 30vh;
+}
+
+/*----------- Écran de 1180px et moins ---------------*/
+
+@media screen and (max-width: 1180px) {
+
+.boxMenu {
+	min-height: 10vh;
+}
+
+.titreMenu h3{
+    font-size: 1.44rem;
+}
+
+.grilleMenu {
+	width: 90%;
+}
+
+.grilleMenu > article {
+	min-height: 15vh;
+    min-width: 15vw;
+}
+
+}
+
+
+/*----------- Écran de 720px et moins ---------------*/
+
+@media screen and (max-width: 720px) {
+
+    
+    .titreMenu h3{
+        font-size: 2rem;
+    }
+    
+    .grilleMenu {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: end;
+        width: 90%;
+        gap:10px;
+    }
+    
+    .grilleMenu > article {
+        max-height: 10vh;
+        min-width: 10vh;
+    }
+    
+    
+ 
+ }

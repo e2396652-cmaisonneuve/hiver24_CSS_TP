@@ -1,0 +1,145 @@
+
+header {
+	inset: 0;
+	background-color: var(--epinard);
+	color: var(--abricot);
+	z-index: 1;
+}
+
+.logo {
+	font-size: 3rem;
+	color: var(--citron);
+	font-weight: 400;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap:20px;
+}
+
+.nav-primaire {
+	padding: 0.2rem 2rem;
+
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-primaire > ul {
+	flex-grow: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: relative;
+}
+
+.menu-deroulant > ul {
+	position: absolute;
+	width: max-content;
+	padding: 20px;
+	background-color: var(--epinard);
+}
+
+.menu-deroulant:not(:hover) > ul {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+
+.side-menu {
+    display: none;}
+
+/*lien de nav*/
+
+nav a {
+	display: block;
+	padding: 10px;
+	margin-top: 0;
+	color: var(--coco);
+}
+
+nav a:hover {
+	color: var(--abricot);
+	text-decoration: underline;
+	text-underline-offset: 10px;
+}
+
+.logo a{
+   color: var(--citron);
+   font-size: 3rem;
+   font-weight: 500;
+}
+
+.logo a:hover {
+	color: var(--abricot);
+	text-decoration: none;
+ }
+
+
+
+.sticky {
+	position: sticky;
+}
+
+
+/*----------- Écran de 1180px et moins ---------------*/
+
+@media screen and (max-width: 1180px) {
+
+	.nav-primaire {    
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-primaire > ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+/*----------- Écran de 8300px et moins ---------------*/
+
+@media screen and (max-width: 830px) {
+	nav a {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		margin-top: 0;
+		color: var(--coco);
+	}
+
+	nav {
+		display: flex;
+		flex-direction: row;
+	}
+
+	nav a.logo {
+		color: var(--citron);
+		font-size: 3rem;
+		font-weight: 500;
+		padding: 0px;
+	 }
+
+	nav a.logo:hover {
+		color: var(--papaye);
+		text-decoration: none;
+	}
+
+	.nav-primaire {    
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.nav-primaire > ul {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding-bottom: 20px;
+	}
+}
